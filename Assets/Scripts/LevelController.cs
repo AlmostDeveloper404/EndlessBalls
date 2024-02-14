@@ -10,6 +10,11 @@ namespace Main
 
         [SerializeField] private PlayerData _defaultPlayerData;
 
+        private void Start()
+        {
+            Time.timeScale = 1f;
+        }
+
         public void Restart()
         {
             PlayerResources.SaveData();

@@ -14,6 +14,7 @@ namespace Main
 
         [SerializeField] private Button _restartButton;
         [SerializeField] private Button _nextLevelButton;
+        [SerializeField] private Button _speedUpButton;
 
         private LevelController _levelController;
         private SoundManager _soundManager;
@@ -33,6 +34,7 @@ namespace Main
         {
             _restartButton.onClick.AddListener(_levelController.Restart);
             _nextLevelButton.onClick.AddListener(_levelController.LoadNext);
+            _speedUpButton.onClick.AddListener(ToggleSpeed);
 
             GameManager.OnLevelCompleted += LevelCompleted;
             GameManager.OnLevelFailed += GameOver;
@@ -42,6 +44,7 @@ namespace Main
         {
             _restartButton.onClick.RemoveAllListeners();
             _nextLevelButton.onClick.RemoveAllListeners();
+            _speedUpButton.onClick.RemoveAllListeners();
 
             GameManager.OnLevelCompleted -= LevelCompleted;
             GameManager.OnLevelFailed -= GameOver;
@@ -65,6 +68,11 @@ namespace Main
             _resultText.text = "Level Failed!";
             _nextLevelButton.gameObject.SetActive(false);
             _endLevelAnimator.SetTrigger(Animations.Finish);
+        }
+
+        private void ToggleSpeed()
+        {
+            Time.timeScale = Time.timeScale == 1f ? 3f : 1f;
         }
     }
 }

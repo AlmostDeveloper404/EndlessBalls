@@ -10,6 +10,9 @@ public class Block : MonoBehaviour
     public int Health;
     public TMP_Text numberText;
 
+    [SerializeField] private int _maxHealth;
+    [SerializeField] private int _minHealth;
+
     BlockStuck blockStuck;
 
     public List<GameObject> parts = new List<GameObject>();
@@ -26,7 +29,7 @@ public class Block : MonoBehaviour
 
     private void Start()
     {
-        Health = Random.Range(100, 30);
+        Health = Random.Range(_maxHealth, _minHealth);
         blockStuck = BlockStuck.instance;
         numberText.text = Health.ToString();
     }
