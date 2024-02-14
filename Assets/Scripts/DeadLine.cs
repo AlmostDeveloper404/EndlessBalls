@@ -1,4 +1,5 @@
 using UnityEngine;
+using Main;
 
 public class DeadLine : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class DeadLine : MonoBehaviour
     {
         if (collision.GetComponent<BlockCollision>())
         {
-            GameManager.instance.Lost();
+            GameManager.ChangeGameState(GameState.LevelFailed);
         }
     }
 }

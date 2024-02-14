@@ -1,48 +1,39 @@
+using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+namespace Main
 {
+    public enum GameState { Preporations, StartGame,LevelCompleted, LevelFailed}
 
-    #region Singleton
-    public static GameManager instance;
 
-    private void Awake()
+    public static class GameManager
     {
-        if (instance!=null)
+        public static event Action OnPreporationsStarted;
+        public static event Action OnGameStarted;
+        public static event Action OnLevelFailed;
+        public static event Action OnLevelCompleted;
+
+
+        public static void ChangeGameState(GameState gameState)
         {
-            Debug.LogWarning("More Than one GameManager!");
-            return;
+            switch (gameState)
+            {
+                case GameState.Preporations:
+                    OnPreporationsStarted?.Invoke();
+                    break;
+                case GameState.StartGame:
+                    OnGameStarted?.Invoke();
+                    break;
+                case GameState.LevelFailed:
+                    OnLevelFailed?.Invoke();
+                    break;
+                case GameState.LevelCompleted:
+                    OnLevelCompleted?.Invoke();
+                    break;
+                default:
+                    break;
+            }
         }
-        instance = this;
-    }
-
-    #endregion
-
-    public GameObject winPanal;
-    public GameObject lostPanal;
-
-    public void Win()
-    {
-        winPanal.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
-    public void Lost()
-    {
-        lostPanal.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1f;
-    }
-
-    public void Accelaration(int amount)
-    {
-        Time.timeScale = amount;
     }
 }
+

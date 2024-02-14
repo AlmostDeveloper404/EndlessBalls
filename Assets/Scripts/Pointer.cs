@@ -38,6 +38,7 @@ public class Pointer : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            prediction.ShowDots();
             _isPressed = true;
         }
         if (Input.GetMouseButtonUp(0))

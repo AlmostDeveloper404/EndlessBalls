@@ -26,7 +26,6 @@ public class Ball : MonoBehaviour
 
         if (deadLine)
         {
-            Debug.Log("Yep");
             ballManager.RemoveBallFromList(this);
             Destroy(gameObject);
         }

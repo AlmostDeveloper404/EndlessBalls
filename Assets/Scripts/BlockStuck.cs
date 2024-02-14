@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Main;
 
 public class BlockStuck : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class BlockStuck : MonoBehaviour
 
     private void Awake()
     {
-        if (instance!=null)
+        if (instance != null)
         {
             Debug.LogWarning("More than one BlockStuck!");
             return;
@@ -20,34 +21,22 @@ public class BlockStuck : MonoBehaviour
 
     #endregion
 
-    GameManager gameManager;
-
-    public List<Block> blocks=new List<Block>();
+    public List<Block> blocks = new List<Block>();
     public Transform BlockStuckTransform;
 
-    public int moveDownDistance=2;
-
-    private void Start()
-    {
-        gameManager = GameManager.instance;
-    }
-
-    public void AddToList()
-    {
-
-    }
+    public int moveDownDistance = 2;
 
     public void RemoveFromList(Block block)
     {
-        if (blocks.Count==1)
+        if (blocks.Count == 1)
         {
-            gameManager.Win();
+            GameManager.ChangeGameState(GameState.LevelCompleted);
         }
         blocks.Remove(block);
     }
 
     public void MoveStuckDown()
     {
-        BlockStuckTransform.position += new Vector3(0f,-moveDownDistance, 0f);
+        BlockStuckTransform.position += new Vector3(0f, -moveDownDistance, 0f);
     }
 }

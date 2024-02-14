@@ -57,6 +57,7 @@ public class BallManager : MonoBehaviour
         {
             yield return new WaitForFixedUpdate();
             yield return new WaitForFixedUpdate();
+            yield return new WaitForFixedUpdate();
             balls[i].LaunchBall(dir * Force);
 
         }

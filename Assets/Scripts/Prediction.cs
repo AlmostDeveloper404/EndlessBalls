@@ -40,6 +40,8 @@ public class Prediction : MonoBehaviour
 
         SceneManager.MoveGameObjectToScene(ballPhisicsCopy,predictionScene);
         SceneManager.MoveGameObjectToScene(predictedSceneGO, predictionScene);
+
+        HideDots();
     }
     public void DrawPredictedLine(Vector3 velocity)
     {
