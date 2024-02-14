@@ -22,7 +22,7 @@ namespace Main
         {
             foreach (AudioSource audio in _audioSources)
             {
-                if (audioClip == audio.clip)
+                if (audioClip == audio.clip && !audio.isPlaying)
                 {
                     audio.Play();
                 }

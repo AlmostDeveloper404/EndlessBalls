@@ -16,14 +16,18 @@ namespace Main
         [SerializeField] private Button _nextLevelButton;
 
         private LevelController _levelController;
+        private SoundManager _soundManager;
+        [SerializeField] private AudioClip _winSound;
+        [SerializeField] private AudioClip _lostSound;
 
         [SerializeField] private Animator _endLevelAnimator;
 
 
         [Inject]
-        private void Construct(LevelController levelController)
+        private void Construct(LevelController levelController, SoundManager soundManager)
         {
             _levelController = levelController;
+            _soundManager = soundManager;
         }
         private void OnEnable()
         {
@@ -50,12 +54,14 @@ namespace Main
 
         private void LevelCompleted()
         {
+            _soundManager.PlaySound(_winSound);
             _resultText.text = "Level Completed!";
             _endLevelAnimator.SetTrigger(Animations.Finish);
         }
 
         private void GameOver()
         {
+            _soundManager.PlaySound(_lostSound);
             _resultText.text = "Level Failed!";
             _nextLevelButton.gameObject.SetActive(false);
             _endLevelAnimator.SetTrigger(Animations.Finish);

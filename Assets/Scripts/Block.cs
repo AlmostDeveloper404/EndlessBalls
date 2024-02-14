@@ -1,22 +1,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
+using Main;
+using TMPro;
 
 public class Block : MonoBehaviour
 {
     public int Health;
-    public Text numberText;
+    public TMP_Text numberText;
 
     BlockStuck blockStuck;
 
     public List<GameObject> parts = new List<GameObject>();
 
-    
+    private SoundManager _soundManager;
+    [SerializeField] private AudioClip _hitSound;
+
+    [Inject]
+    private void Construct(SoundManager soundManager)
+    {
+        _soundManager = soundManager;
+    }
 
 
     private void Start()
     {
-        Health = Random.Range(100,30);
+        Health = Random.Range(100, 30);
         blockStuck = BlockStuck.instance;
         numberText.text = Health.ToString();
     }
@@ -28,7 +38,7 @@ public class Block : MonoBehaviour
 
     void BlockGRX()
     {
-        int currentParts=0;
+        int currentParts = 0;
         for (int i = 0; i < parts.Count; i++)
         {
             if (Health > i * 20)
@@ -43,14 +53,15 @@ public class Block : MonoBehaviour
         }
         for (int i = 0; i < currentParts; i++)
         {
-            parts[i].transform.localPosition = new Vector3(0f,1f*(currentParts-1-i),0f);
+            parts[i].transform.localPosition = new Vector3(0f, 1f * (currentParts - 1 - i), 0f);
         }
-        
+
 
     }
     public void Damage()
     {
-        if (Health==1)
+        _soundManager.PlaySound(_hitSound);
+        if (Health == 1)
         {
             blockStuck.RemoveFromList(this);
             DestroyBlock();

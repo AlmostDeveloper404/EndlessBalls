@@ -36,7 +36,7 @@ public class Pointer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !Helpers.Helper.IsOverUI())
         {
             prediction.ShowDots();
             _isPressed = true;
@@ -77,7 +77,6 @@ public class Pointer : MonoBehaviour
     public void NextShot()
     {
         _isPressed = false;
-        prediction.ShowDots();
         ballState = BallState.Idle;
     }
 

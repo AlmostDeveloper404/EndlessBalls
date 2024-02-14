@@ -836,6 +836,8 @@ MonoBehaviour:
   _resultText: {fileID: 1087016343553069398}
   _restartButton: {fileID: 4768738116928108861}
   _nextLevelButton: {fileID: 3646289931275629357}
+  _winSound: {fileID: 8300000, guid: 8bf015863f691134fadb1d56dcb74a01, type: 3}
+  _lostSound: {fileID: 8300000, guid: 2b33a8aaf5dbe824a828f64ba1842e2e, type: 3}
   _endLevelAnimator: {fileID: 8595757469487909461}
 --- !u!1 &7347369961519831804
 GameObject:
