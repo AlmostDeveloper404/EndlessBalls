@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: a78310a600a06c84e8f53d55a170c683
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: badminton
+  - first:
+      1: 100002
+    second: ball foodball
+  - first:
+      1: 100004
+    second: 'baseball '
+  - first:
+      1: 100006
+    second: basketball001
+  - first:
+      1: 100008
+    second: Bia
+  - first:
+      1: 100010
+    second: boxing
+  - first:
+      1: 100012
+    second: //RootNode
+  - first:
+      1: 100014
+    second: Golf
+  - first:
+      1: 100016
+    second: Rugby
+  - first:
+      1: 100018
+    second: table tennis bats
+  - first:
+      1: 100020
+    second: table tennis bats2
+  - first:
+      1: 100022
+    second: talbletennies
+  - first:
+      1: 100024
+    second: Tennis
+  - first:
+      1: 100026
+    second: volleyball
+  - first:
+      1: 100028
+    second: weird
+  - first:
+      4: 400000
+    second: badminton
+  - first:
+      4: 400002
+    second: ball foodball
+  - first:
+      4: 400004
+    second: 'baseball '
+  - first:
+      4: 400006
+    second: basketball001
+  - first:
+      4: 400008
+    second: Bia
+  - first:
+      4: 400010
+    second: boxing
+  - first:
+      4: 400012
+    second: //RootNode
+  - first:
+      4: 400014
+    second: Golf
+  - first:
+      4: 400016
+    second: Rugby
+  - first:
+      4: 400018
+    second: table tennis bats
+  - first:
+      4: 400020
+    second: table tennis bats2
+  - first:
+      4: 400022
+    second: talbletennies
+  - first:
+      4: 400024
+    second: Tennis
+  - first:
+      4: 400026
+    second: volleyball
+  - first:
+      4: 400028
+    second: weird
+  - first:
+      23: 2300000
+    second: badminton
+  - first:
+      23: 2300002
+    second: ball foodball
+  - first:
+      23: 2300004
+    second: 'baseball '
+  - first:
+      23: 2300006
+    second: basketball001
+  - first:
+      23: 2300008
+    second: Bia
+  - first:
+      23: 2300010
+    second: boxing
+  - first:
+      23: 2300012
+    second: Golf
+  - first:
+      23: 2300014
+    second: Rugby
+  - first:
+      23: 2300016
+    second: table tennis bats
+  - first:
+      23: 2300018
+    second: table tennis bats2
+  - first:
+      23: 2300020
+    second: talbletennies
+  - first:
+      23: 2300022
+    second: Tennis
+  - first:
+      23: 2300024
+    second: volleyball
+  - first:
+      23: 2300026
+    second: weird
+  - first:
+      33: 3300000
+    second: badminton
+  - first:
+      33: 3300002
+    second: ball foodball
+  - first:
+      33: 3300004
+    second: 'baseball '
+  - first:
+      33: 3300006
+    second: basketball001
+  - first:
+      33: 3300008
+    second: Bia
+  - first:
+      33: 3300010
+    second: boxing
+  - first:
+      33: 3300012
+    second: Golf
+  - first:
+      33: 3300014
+    second: Rugby
+  - first:
+      33: 3300016
+    second: table tennis bats
+  - first:
+      33: 3300018
+    second: table tennis bats2
+  - first:
+      33: 3300020
+    second: talbletennies
+  - first:
+      33: 3300022
+    second: Tennis
+  - first:
+      33: 3300024
+    second: volleyball
+  - first:
+      33: 3300026
+    second: weird
+  - first:
+      43: 4300000
+    second: badminton
+  - first:
+      43: 4300002
+    second: basketball001
+  - first:
+      43: 4300004
+    second: Golf
+  - first:
+      43: 4300006
+    second: Tennis
+  - first:
+      43: 4300008
+    second: 'baseball '
+  - first:
+      43: 4300010
+    second: volleyball
+  - first:
+      43: 4300012
+    second: Bia
+  - first:
+      43: 4300014
+    second: Rugby
+  - first:
+      43: 4300016
+    second: talbletennies
+  - first:
+      43: 4300018
+    second: weird
+  - first:
+      43: 4300020
+    second: boxing
+  - first:
+      43: 4300022
+    second: table tennis bats
+  - first:
+      43: 4300024
+    second: table tennis bats2
+  - first:
+      43: 4300026
+    second: ball foodball
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 6
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.1524
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

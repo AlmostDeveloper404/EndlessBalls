@@ -21,6 +21,8 @@ public class Pointer : MonoBehaviour
     public BallState ballState;
     public Prediction prediction;
 
+    private bool _isPressed = false;
+
     private void Awake()
     {
         ballManager = GetComponent<BallManager>();
@@ -29,19 +31,26 @@ public class Pointer : MonoBehaviour
 
     private void Start()
     {
-        plane = new Plane(-Vector3.forward,Vector3.zero);
+        plane = new Plane(-Vector3.forward, Vector3.zero);
     }
 
     private void Update()
     {
-        CulculateDirection();
+        if (Input.GetMouseButtonDown(0))
+        {
+            _isPressed = true;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            CulculateDirection();
+        }
     }
 
     private void FixedUpdate()
     {
 
         LinePredictedGRX();
-        
+
     }
 
     void LinePredictedGRX()
@@ -54,24 +63,22 @@ public class Pointer : MonoBehaviour
         prediction.DrawPredictedLine(dir * ballManager.Force);
     }
     void CulculateDirection()
-    {       
+    {
         if (ballState == BallState.Idle)
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                ballState = BallState.Active;
-                prediction.HideDots();
+            ballState = BallState.Active;
+            prediction.HideDots();
 
-                ballManager.LaunchBalls(dir);
-            }
-        }        
+            ballManager.LaunchBalls(dir);
+        }
     }
 
     public void NextShot()
     {
+        _isPressed = false;
         prediction.ShowDots();
         ballState = BallState.Idle;
     }
 
-    
+
 }

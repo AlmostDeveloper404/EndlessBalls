@@ -20,8 +20,6 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    public GameObject poxyi;
-
     public GameObject winPanal;
     public GameObject lostPanal;
 
@@ -46,10 +44,5 @@ public class GameManager : MonoBehaviour
     public void Accelaration(int amount)
     {
         Time.timeScale = amount;
-    }
-
-    public void DisplayMassage()
-    {
-        poxyi.SetActive(true);   
     }
 }

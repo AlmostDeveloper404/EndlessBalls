@@ -17,13 +17,16 @@ public class Ball : MonoBehaviour
     {
         ballRB.velocity = dir;
         ballRB.isKinematic = false;
-        
+
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.collider.CompareTag("DeathLine"))
+        DeadLine deadLine = other.GetComponent<DeadLine>();
+
+        if (deadLine)
         {
+            Debug.Log("Yep");
             ballManager.RemoveBallFromList(this);
             Destroy(gameObject);
         }

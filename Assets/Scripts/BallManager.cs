@@ -10,7 +10,7 @@ public class BallManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance!=null)
+        if (instance != null)
         {
             Debug.LogWarning("More Than one BallManager!");
             return;
@@ -37,7 +37,7 @@ public class BallManager : MonoBehaviour
     Pointer pointer;
 
 
-    
+
     private void Start()
     {
         pointer = GetComponent<Pointer>();
@@ -46,24 +46,24 @@ public class BallManager : MonoBehaviour
     }
     public void LaunchBalls(Vector3 _dir)
     {
-        
+
         dir = _dir;
         StartCoroutine(TimeBetweenBalls());
     }
 
     IEnumerator TimeBetweenBalls()
     {
-        for (int i = CurrentAmountOfBalls-1; i >= 0; i--)
+        for (int i = CurrentAmountOfBalls - 1; i >= 0; i--)
         {
             yield return new WaitForFixedUpdate();
             yield return new WaitForFixedUpdate();
             balls[i].LaunchBall(dir * Force);
-            
+
         }
     }
     public void FillListWithBalls()
     {
-        
+
         for (int i = 0; i < CurrentAmountOfBalls; i++)
         {
             GameObject ball = Instantiate(BallPrefab);
@@ -74,8 +74,12 @@ public class BallManager : MonoBehaviour
     }
     public void RemoveBallFromList(Ball ball)
     {
-        balls.Remove(ball);
-        if (balls.Count==0)
+        if (balls.Contains(ball))
+        {
+            balls.Remove(ball);
+
+        }
+        if (balls.Count == 0)
         {
             Debug.Log("Yep");
             FillListWithBalls();
